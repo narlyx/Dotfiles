@@ -4,6 +4,8 @@
 * Eza
 * Thefuck
 * Tmux
+* Font Awesome
+* Nerd Fonts
 
 ## Hyprland Dependancies
 * Hyprland (Ofcourse)
