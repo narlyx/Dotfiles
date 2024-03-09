@@ -3,6 +3,8 @@
 * Zoxide
 * Eza
 * Thefuck
+* Font Awesome
+* Nerd Fonts
 
 ## Hyprland Dependancies
 * Hyprland (Ofcourse)
