@@ -1,8 +1,3 @@
-if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-  unset __ETC_PROFILE_NIX_SOURCED
-  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-fi
-
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
 
@@ -16,3 +11,11 @@ alias python="python3"
 
 PROMPT="%F{green}%n@%m %F{blue}%~ %F{white}> "
 RPROMPT="%F{green}%t"
+
+if [ -z "$TMUX" ]
+then
+    tmux attach -t TMUX || tmux new -s TMUX
+fi
+if [[ $- =~ i ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_TTY" ]]; then
+  tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
+fi

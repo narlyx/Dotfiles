@@ -3,6 +3,7 @@
 * Zoxide
 * Eza
 * Thefuck
+* Tmux
 
 ## Hyprland Dependancies
 * Hyprland (Ofcourse)
