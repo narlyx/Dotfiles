@@ -1,0 +1,124 @@
+@define-color foreground #87CEFA;
+@define-color midground #B0C4DE;
+@define-color background #000000;
+@define-color foretext #000000;
+@define-color midtext #2F4F4F;
+@define-color backtext #808080;
+
+* {
+  font-weight: bold;
+  font-size: 12px;;
+}
+
+window#waybar {
+  background: rgba(0,0,0,0.2);
+  border-bottom: 0px;
+}
+
+#custom-appmenu {
+  margin: 4px 0px 4px 4px;
+  padding: 0px 4px;
+  border: 0px;
+  border-radius: 10px;
+  min-width: 50px;
+  color: white;
+  background: rgba(0,0,0,0.2);
+}
+
+#taskbar {
+  margin: 4px 0px;
+  padding: 4px;
+  border-radius: 10px;
+  border: 0px;
+  background: rgba(0,0,0,0.4);
+}
+
+#taskbar button {
+  padding: 0px 5px;
+  margin: 0px 3px;
+  border-radius: 10px;
+  border: 0px;
+  transition: all 0.3s ease-in-out;
+  background: gray;
+}
+
+#taskbar button.active {
+  border: 0px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  background: #B0C4DE;
+}
+
+#taskbar button:hover {
+  border: 0px;
+  transition: all 0.3s ease-in-out;
+  background: white;
+}
+
+#workspaces {
+  margin: 4px 0px;
+  padding: 4px;
+  border-radius: 10px;
+  border: 0px;
+  background: rgba(0,0,0,0.4);
+}
+
+#workspaces button {
+  padding: 0px 5px;
+  margin: 0px 3px;
+  border-radius: 10px;
+  border: 0px;
+  transition: all 0.3s ease-in-out;
+  background: gray;
+}
+
+
+#workspaces button.active {
+  min-width: 35px;
+  border: 0px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  background: #B0C4DE;
+}
+
+#workspaces button.urgent {
+  background: salmon;
+}
+
+#workspaces button:hover {
+  border: 0px;
+  min-width: 40px;
+  transition: all 0.3s ease-in-out;
+  background: white;
+}
+
+
+#clock {
+  margin: 4px 4px 4px 0px;
+  padding: 0px 4px;
+  border: 0px;
+  border-radius: 10px;
+  min-width: 50px;
+  color: white;
+  background: rgba(0,0,0,0.4);
+}
+
+#tray {
+  margin: 4px 0px;
+  padding: 0px 4px;
+  border: 0px;
+  border-radius: 10px;
+  min-width: 50px;
+  background: rgba(0,0,0,0.4);
+}
+
+#wireplumber {
+  margin: 4px 0px;
+  padding: 0px 4px;
+  border: 0px;
+  border-radius: 10px;
+  min-width: 50px;
+  color: white;
+  background: rgba(0,0,0,0.4);
+}
+

@@ -1,0 +1,14 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Narlyx
+	email = 109835029+narlyx@users.noreply.github.com
+[credential "https://github.com"]
+	helper = 
+	helper = !/etc/profiles/per-user/narlyx/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/etc/profiles/per-user/narlyx/bin/gh auth git-credential
