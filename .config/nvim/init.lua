@@ -1,12 +1,3 @@
--- General Configuration
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
-vim.bo.softtabstop = 2
-
-vim.opt.nu = true;
-vim.opt.relativenumber = true;
-
 -- Lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -22,5 +13,5 @@ end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 
--- Setting Theme
-vim.cmd.colorscheme "catppuccin-mocha"
+-- Set.lua
+require("set")
