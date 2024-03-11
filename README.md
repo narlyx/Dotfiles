@@ -2,8 +2,10 @@
 * Zsh
 * Zoxide
 * Eza
+* Bat
 * Thefuck
 * Tmux
+* Fzf
 * Font Awesome
 * Nerd Fonts
 
