@@ -6,7 +6,7 @@ alias ls="eza"
 alias ll="eza -lah"
 alias tree="eza --tree --ignore-glob='.git'"
 alias cat="bat"
-alias fzf="fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"
+alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 
 alias python="python3"
 
