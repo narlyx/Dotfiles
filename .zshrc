@@ -2,7 +2,7 @@ eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
 
 alias cd="z"
-alias ls="eza"
+alias ls="eza -lh"
 alias ll="eza -lah"
 alias tree="eza --tree --ignore-glob='.git'"
 alias cat="bat"
