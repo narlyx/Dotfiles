@@ -5,6 +5,7 @@ alias cd="z"
 alias ls="eza -lh"
 alias ll="eza -lah"
 alias tree="eza --tree --ignore-glob='.git'"
+alias du="du -h --max-depth=1"
 alias cat="bat"
 alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 
