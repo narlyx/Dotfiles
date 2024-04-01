@@ -18,6 +18,7 @@
   "modules-right": [
     "tray",
     "wireplumber",
+    "battery",
     "clock"
   ]
 }
