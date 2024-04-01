@@ -112,6 +112,16 @@ window#waybar {
   background: rgba(0,0,0,0.4);
 }
 
+#battery {
+  margin: 4px 0px;
+  padding: 0px 4px;
+  border: 0px;
+  border-radius: 10px;
+  min-width: 50px;
+  color: white;
+  background: rgba(0,0,0,0.4);
+}
+
 #wireplumber {
   margin: 4px 0px;
   padding: 0px 4px;
