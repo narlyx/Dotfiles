@@ -8,6 +8,12 @@
     "on-click": "wofi --show drun",
     "tooltip": false
   },
+  
+  "custom/powermenu": {
+    "format": "󰐥",
+    "on-click": "~/.config/sway/scripts/powermenu.sh",
+    "tooltip": false
+  },
 
   "sway/workspaces": {
     "all-outputs": true

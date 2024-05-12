@@ -68,3 +68,10 @@ window#waybar {
   margin-right: 0px;
   padding: 0px 6px 0px 6px;
 }
+
+#custom-powermenu {
+  background: #e78284;
+  margin: 5px;
+  margin-left: 0px;
+  padding: 0px 8px 0px 8px;
+}
