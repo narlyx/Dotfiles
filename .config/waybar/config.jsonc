@@ -1,15 +1,16 @@
-// -*- mode: jsonc -*-
 {
   "layer": "top",
-  "height": 28,
+  "height": 20,
   "spacing": 4,
 
   "include": ["~/.config/waybar/modules.json"],
 
   "modules-left": [
-    "custom/appmenu",
-    "hyprland/workspaces",
-    "wlr/taskbar"
+    "custom/launcher",
+    "sway/workspaces",
+    "sway/mode",
+    "custom/spacer",
+    "sway/window"
   ],
 
   "modules-center": [
@@ -17,8 +18,10 @@
 
   "modules-right": [
     "tray",
+    "custom/spacer",
     "wireplumber",
-    "battery",
+    "custom/spacer",
     "clock"
   ]
+
 }

@@ -4,13 +4,15 @@
 * Eza
 * Bat
 * Thefuck
-* Tmux
 * Fzf
-* Font Awesome
-* Nerd Fonts
 
-## Hyprland Dependancies
-* Hyprland (Ofcourse)
-* Kitty
-* Waybar
+* Nitch
+* Btop
+
+## Sway Dependancies
+* Swaybg
 * Wofi
+* Waybar
+* Grim
+* Slurp
+* Kitty
