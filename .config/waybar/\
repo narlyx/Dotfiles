@@ -5,66 +5,47 @@
 }
 
 window#waybar {
-  background: #232634;
+  background: #1b1b1b;
 }
 
 #custom-spacer {
-  color: #303446;
+  color: #282828;
   margin: 8px;
 }
 
 #custom-launcher {
-  color: #1b1b1b;
-  background: #ef9f76;
+  background: #fe8019;
   margin: 5px;
-  margin-right: 0px;
   padding: 0px 20px 0px 20px;
 }
 
 #workspaces {
-  background: #303446;
+  background: #282828;
   margin: 5px;
-  margin-right: 0px;
   padding: 0px;
 }
 
 #workspaces button {
-  color: #414559;
+  color:gray;
   padding: 0px 4px 0px 4px;
 }
 
 #workspaces button.current_output {
-  color: #737994;
+  color: #4f422e;
 }
 
 #workspaces button.focused {
-  color: #ca9ee6;
-}
-
-#workspaces button.urgent {
-  color: #e78284;
+  color: #fadb2f;
 }
 
 #mode {
-  color: #232634;
-  background: #e78284;
+  background: #cc241d;
   margin: 5px;
-  margin-right: 0px;
   padding: 0px 6px 0px 6px;
-}
-
-#window {
-  color: #a89984;
 }
 
 #clock {
-  background: #303446;
+  background: #282828;
   margin: 5px;
-  padding: 0px 6px 0px 6px;
-}
-
-#wireplumber {
-  margin: 5px;
-  margin-right: 0px;
   padding: 0px 6px 0px 6px;
 }

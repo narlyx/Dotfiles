@@ -1,57 +1,45 @@
 {
-  "hyprland/workspaces": {
-    "on-click": "activate",
-    "active-only": false,
-    "all-outputs": true,
-    "format": "{}"
+  "custom/spacer": {
+    "format": ""
   },
 
-  "hyprland/window": {
-    "separate-outputs": true
-  },
-
-  "tray": {
-    "spacing": 10
-  },
-
-  "clock": {
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}"
-  },
-
-  "custom/appmenu": {
-    "format": "Apps",
+  "custom/launcher": {
+    "format": "󱓞  Launcher",
     "on-click": "wofi --show drun",
     "tooltip": false
   },
 
+  "sway/workspaces": {
+    "all-outputs": true
+  },
+
+  "sway/mode": {
+    "format": "{} Mode"
+  },
+
+  "sway/window": {
+    "format": "{title}",
+    "tooltip": false,
+    "icon": true,
+    "icon-size": 14
+  },
+
   "wireplumber": {
-    "format": "{volume}% {icon}",
+    "format": "{icon}    {volume}%",
     "format-muted": "",
     "on-click": "helvum",
     "scroll-step": 2,
     "format-icons": ["", "", ""]
   },
 
-  "battery": {
-  	"interval": 60,
-  	"states": {
-  		"warning": 30,
-  		"critical": 15
-  	},
-  	"format": "{capacity}% {icon}",
-  	"format-icons": ["", "", "", "", ""],
-  	"max-length": 25
+  "tray": {
+    "icon-size": 14,
+    "spacing": 10
   },
 
-  "wlr/taskbar": {
-	  "format": "{icon}",
-	  "icon-size": 14,
-	  "icon-theme": "Numix-Circle",
-	  "tooltip-format": "{title}",
-	  "on-click": "activate",
-	  "on-click-middle": "close",
-    "all-outputs": false
+  "clock": {
+    "interval": 5,
+    "tooltip": true,
+    "format": "    {:%r}"
   }
-
 }

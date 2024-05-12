@@ -1,9 +1,3 @@
--- Wakatime plugin
-local wakatime = {
-  "wakatime/vim-wakatime",
-  lazy = false
-}
-
 local treesitter = {
   "nvim-treesitter/nvim-treesitter",
   build = function()
@@ -129,8 +123,13 @@ local catppuccinTheme = {
   priority = 1000
 }
 
+local gruvboxTheme = {
+  "morhetz/gruvbox",
+  name = "gruvbox",
+  priority = 1000
+}
+
 return {
-  wakatime,
   treesitter,
   lspZero,
   vimTmux,

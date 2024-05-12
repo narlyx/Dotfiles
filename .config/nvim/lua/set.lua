@@ -6,4 +6,4 @@ vim.bo.softtabstop = 2
 vim.opt.nu = true;
 vim.opt.relativenumber = true;
 
-vim.cmd.colorscheme "catppuccin-mocha"
+vim.cmd.colorscheme "catppuccin-frappe"
