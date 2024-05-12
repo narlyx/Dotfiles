@@ -21,7 +21,8 @@
     "custom/spacer",
     "wireplumber",
     "custom/spacer",
-    "clock"
+    "clock",
+    "custom/powermenu"
   ]
 
 }
