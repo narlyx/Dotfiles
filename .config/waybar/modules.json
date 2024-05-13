@@ -15,6 +15,15 @@
     "tooltip": false
   },
 
+  "custom/pacman": {
+    "format": "   {}",
+    "interval": 7200,
+    "exec": "checkupdates | wc -l",
+    "exec-if": "exit 0",
+    "on-click": "kitty -e sudo pacman -Syu",
+    "signal": 8
+  },
+
   "sway/workspaces": {
     "all-outputs": true
   },
