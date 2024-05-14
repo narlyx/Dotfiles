@@ -1,3 +1,6 @@
+# Note
+This repo is sepcificlly DESIGNED FOR ARCH, if things do not work inspected... join the clan.
+
 ## General Dependancies
 * Zsh
 * Zoxide
