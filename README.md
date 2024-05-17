@@ -9,6 +9,8 @@ This repo is sepcificlly DESIGNED FOR ARCH, if things do not work inspected... j
 * Thefuck
 * Fzf
 
+* Xsel
+
 * Nitch
 * Btop
 
