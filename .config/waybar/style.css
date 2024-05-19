@@ -85,6 +85,13 @@ window#waybar {
   padding: 0px 6px 0px 6px;
 }
 
+#battery {
+  color: #c6d0f5;
+  margin: 5px;
+  margin-right: 0px;
+  padding: 0px 6px 0px 6px;
+}
+
 #custom-powermenu {
   color: #232634;
   background: #e78284;
