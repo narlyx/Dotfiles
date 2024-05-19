@@ -30,6 +30,16 @@ output HDMI-A-1 resolution 1920x1080@75Hz position 1920,900
 output DP-3 resolution 1920x1080@75Hz position 0,900
 output DP-2 resolution 1600x900@75Hz position 1500,0
 
+output eDP-1 resolution 2560x1600@60Hz scale 1.32
+
+# Input
+input type:touchpad {
+    natural_scroll false
+    scroll_factor 0.75
+
+
+}
+
 # Bar
 bar {
   swaybar_command waybar
@@ -56,6 +66,16 @@ bar {
 
   # Screenshot
   bindsym $mod+Print exec grim -g "$(slurp)"
+
+  # XF86 Keys
+  bindsym XF86AudioRaiseVolume exec wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+
+  bindsym XF86AudioLowerVolume exec wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%-
+  bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+  bindsym XF86AudioPlay exec playerctl play-pause
+  bindsym XF86AudioNext exec playerctl next
+  bindsym XF86AudioPrev exec playerctl previus
+  bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+  bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
   # Move focus
   bindsym $mod+$left focus left
