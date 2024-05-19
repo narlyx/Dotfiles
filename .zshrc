@@ -26,6 +26,7 @@ alias fetch="nitch"
 alias top="btop"
 
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias update-grub2="sudo grub2-mkconfig -o /boot/grub2/grub.cf"
 
 # Prompt
 nitch

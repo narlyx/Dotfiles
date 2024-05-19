@@ -19,7 +19,6 @@
   "modules-right": [
     "tray",
     "custom/spacer",
-    "custom/pacman",
     "wireplumber",
     "network",
     "custom/spacer",
