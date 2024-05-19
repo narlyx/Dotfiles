@@ -19,7 +19,7 @@
   "modules-right": [
     "tray",
     "custom/spacer",
-    "custom/pacman",
+    "battery",
     "wireplumber",
     "network",
     "custom/spacer",
