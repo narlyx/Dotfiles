@@ -10,24 +10,25 @@ alias tree="eza --tree --ignore-glob='.git'"
 alias du="du -h --max-depth=1"
 alias cat="bat"
 
-# Fzf
+# Fzf Shortcut
 alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 
-# Man
+# Man modified to use bat
 export MANPAGER="sh -c 'col -bx | bat -l man'"
 export MANROFFOPT="-c"
 
-# Clipboard
+# Clipboard Shortcuts
 alias pbcopy="xsel --input --clipboard"
 alias pbpaste="xsel --output --clipboard"
 
-# Shortcuts
+# Showoff Shortcuts
 alias fetch="nitch"
 alias top="btop"
 
+# Grub Shortcuts
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # Prompt
-nitch
+fetch
 PROMPT="%F{green}%n@%m %F{blue}%~ %F{white}> "
 RPROMPT="%F{green}%t"
