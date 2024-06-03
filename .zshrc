@@ -4,9 +4,9 @@ eval "$(thefuck --alias)"
 
 # Unix CLI replacements
 alias cd="z"
-alias ls="eza -lh"
-alias ll="eza -lah"
-alias tree="eza --tree --ignore-glob='.git'"
+alias ls="eza -lh --icons"
+alias ll="eza -lah --icons"
+alias tree="eza --tree --icons --ignore-glob='.git'"
 alias du="du -h --max-depth=1"
 alias cat="bat"
 
