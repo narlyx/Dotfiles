@@ -11,10 +11,10 @@ set $powermenu ~/.config/sway/scripts/powermenu.sh
 
 set $ws1 1: TERM
 set $ws2 2: HTTP
-set $ws3 3: EDIT
+set $ws3 3: TOOL
 set $ws4 4: NOTE
 set $ws5 5: MDIA
-set $ws6 6: NULL
+set $ws6 6: TEXT
 set $ws7 7: NULL
 set $ws8 8: NULL
 set $ws9 9: NULL
@@ -36,8 +36,6 @@ output eDP-1 resolution 2560x1600@60Hz scale 1.32
 input type:touchpad {
     natural_scroll false
     scroll_factor 0.75
-
-
 }
 
 # Bar
