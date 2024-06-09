@@ -14,7 +14,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     style = 'plain'
     background = 'transparent'
     foreground = 'blue'
-    template = '{{ .Path }}'
+    template = '  {{ .Path }}'
 
     [blocks.segments.properties]
       style = 'full'
@@ -24,7 +24,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     style = 'plain'
     foreground = 'p:grey'
     background = 'transparent'
-    template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+    template = ' 󰊢 {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
 
     [blocks.segments.properties]
       branch_icon = ''
@@ -32,18 +32,24 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
       fetch_status = true
 
 [[blocks]]
-  type = 'rprompt'
-  overflow = 'hidden'
+  type = "prompt"
+  alignment = "right"
 
   [[blocks.segments]]
     type = 'executiontime'
     style = 'plain'
     foreground = 'yellow'
     background = 'transparent'
-    template = '{{ .FormattedMs }}'
+    template = '󰥕 {{ .FormattedMs }}'
 
     [blocks.segments.properties]
       threshold = 5000
+
+  [[blocks.segments]]
+    type = "time"
+    style = "plain"
+    foreground = "green"
+    template = ' 󰥔 {{ .Format }} '
 
 [[blocks]]
   type = 'prompt'
