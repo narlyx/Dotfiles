@@ -1,4 +1,5 @@
 # Evals
+eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/config.toml)"
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
 
@@ -28,8 +29,3 @@ alias top="btop"
 # Grub Shortcuts
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias update-grub2="sudo grub2-mkconfig -o /boot/grub2/grub.cf"
-
-# Prompt
-fetch
-PROMPT="%F{green}%n@%m %F{blue}%~ %F{white}> "
-RPROMPT="%F{green}%t"

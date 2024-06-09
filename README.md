@@ -5,6 +5,7 @@ This repo is sepcificlly DESIGNED FOR ARCH, if things do not work inspected... j
 * Zsh
 * Zoxide
 * Eza
+* Oh-My-Posh
 * Bat
 * Thefuck
 * Fzf
