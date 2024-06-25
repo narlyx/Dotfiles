@@ -29,6 +29,3 @@ alias top="btop"
 # Grub Shortcuts
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias update-grub2="sudo grub2-mkconfig -o /boot/grub2/grub.cf"
-
-# Forbiden Showoff
-fetch
