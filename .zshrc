@@ -3,6 +3,9 @@ eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/config.toml)"
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
 
+# Tmux
+if [ "$TMUX" = "" ]; then tmux; fi
+
 # Unix CLI replacements
 alias cd="z"
 alias ls="eza --oneline --icons --git"
