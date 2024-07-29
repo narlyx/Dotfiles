@@ -7,6 +7,7 @@
 * Thefuck
 * Fzf
 * Xsel
+* Tmux
 
 ## Sway Dependancies
 * Swaybg
