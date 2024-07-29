@@ -15,4 +15,4 @@
 * Grim
 * Slurp
 * Kitty
-* Brichtnessctl
+* Brightnessctl
