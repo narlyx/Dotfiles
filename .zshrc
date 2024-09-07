@@ -1,10 +1,15 @@
 # Evals
-eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/config.toml)"
+eval "$(starship init zsh)"
+#eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/config.toml)"
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
 
-# Tmux
-if [ "$TMUX" = "" ]; then tmux; fi
+# Tmux autolaunch
+if [[ -n $DISPLAY && -n $XDG_CURRENT_DESKTOP ]]; then
+  if [ -z "$TMUX" ]; then
+    tmux attach-session -t $(tmux ls | awk '{print $1}' | tail -n 1) 2>/dev/null || tmux new-session
+  fi
+fi
 
 # Unix CLI replacements
 alias cd="z"
