@@ -9,11 +9,6 @@
 * Xsel
 * Tmux
 
-## Sway Dependancies
-* Swaybg
-* Wofi
-* Waybar
-* Grim
-* Slurp
-* Kitty
-* Brightnessctl
+# Other Configurations
+* Alacritty
+* Neovim
