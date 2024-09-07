@@ -2,7 +2,7 @@
 * Zsh
 * Zoxide
 * Eza
-* Oh-my-posh
+* Starship
 * Bat
 * Thefuck
 * Fzf
