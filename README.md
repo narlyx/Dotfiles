@@ -8,6 +8,7 @@
 * Fzf
 * Xsel
 * Tmux
+* Rmtrash
 
 # Other Configurations
 * Alacritty

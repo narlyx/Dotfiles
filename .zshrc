@@ -18,6 +18,8 @@ alias ll="eza -lah --icons --git"
 alias tree="eza --tree --icons --ignore-glob='.git'"
 alias du="du -h --max-depth=1"
 alias cat="bat"
+alias rm="rmtrash"
+alias rmdir="rmdirtrash"
 
 # Fzf Shortcut
 alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
