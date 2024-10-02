@@ -13,3 +13,4 @@
 # Other Configurations
 * Alacritty
 * Neovim
+* Oh-my-posh
