@@ -13,4 +13,5 @@
 # Other Configurations
 * Alacritty
 * Neovim
+    * NPM is required for the "Mason" plugin
 * Oh-my-posh
