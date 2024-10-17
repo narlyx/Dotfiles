@@ -141,12 +141,6 @@ local catppuccinTheme = {
   priority = 1000
 }
 
-local gruvboxTheme = {
-  "morhetz/gruvbox",
-  name = "gruvbox",
-  priority = 1000
-}
-
 return {
   treesitter,
   lspZero,
