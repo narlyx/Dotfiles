@@ -7,6 +7,10 @@ return {
   init = function()
     vim.g.barbar_auto_setup = true
 
+    require'barbar'.setup {
+      no_name_title = "Untitled",
+    }
+
     local map = vim.api.nvim_set_keymap
     local opts = { noremap = true, silent = true }
 
