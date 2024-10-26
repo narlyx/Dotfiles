@@ -5,7 +5,7 @@ eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
 
 # Tmux autolaunch
-if [[ -n $DISPLAY && -n $XDG_CURRENT_DESKTOP ]]; then
+if [[ -n $DISPLAY && -n $XDG_CURRENT_DESKTOP ]] || [[ "$(uname)" == "Darwin" ]]; then
   if [ -z "$TMUX" ]; then
     tmux attach-session -t $(tmux ls | awk '{print $1}' | tail -n 1) 2>/dev/null || tmux new-session
   fi
@@ -18,8 +18,12 @@ alias ll="eza -lah --icons --git"
 alias tree="eza --tree --icons --ignore-glob='.git'"
 alias du="du -h --max-depth=1"
 alias cat="bat"
-alias rm="rmtrash"
-alias rmdir="rmdirtrash"
+
+# Will not run on macos
+if [[ "$(uname)" != "Darwin" ]]; then
+  alias rm="rmtrash"
+  alias rmdir="rmdirtrash"
+fi
 
 # Fzf Shortcut
 alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"

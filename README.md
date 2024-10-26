@@ -8,7 +8,7 @@
 * Fzf
 * Xsel
 * Tmux
-* Rmtrash
+* JetBrainsMono Nerd Font
 
 # Other Configurations
 * Alacritty
