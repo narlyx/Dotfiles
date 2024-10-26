@@ -6,7 +6,7 @@ eval "$(thefuck --alias)"
 
 # Tmux autolaunch
 if [[ -n $DISPLAY && -n $XDG_CURRENT_DESKTOP ]] || [[ "$(uname)" == "Darwin" ]]; then
-  if [ -z "$TMUX" ]; then
+  if [[ -z "$TMUX" && "$TERM" == "alacritty" ]]; then
     tmux attach-session -t $(tmux ls | awk '{print $1}' | tail -n 1) 2>/dev/null || tmux new-session
   fi
 fi
