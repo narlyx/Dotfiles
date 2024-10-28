@@ -25,21 +25,21 @@ if [[ "$(uname)" != "Darwin" ]]; then
   alias rmdir="rmdirtrash"
 fi
 
-# Fzf Shortcut
+# Git shortcuts
+alias gs="git status"
+alias gd="git diff origin/master | cat"
+
+# Fzf shortcut
 alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 
 # Man modified to use bat
 export MANPAGER="sh -c 'col -bx | bat -l man'"
 export MANROFFOPT="-c"
 
-# Clipboard Shortcuts
+# Clipboard shortcuts
 alias pbcopy="xsel --input --clipboard"
 alias pbpaste="xsel --output --clipboard"
 
-# Showoff Shortcuts
-alias fetch="nitch"
-alias top="btop"
-
-# Grub Shortcuts
+# Grub shortcuts
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias update-grub2="sudo grub2-mkconfig -o /boot/grub2/grub.cf"
