@@ -16,6 +16,9 @@ return {
     'williamboman/mason.nvim',
     lazy = false,
     config = true,
+    init = function()
+      vim.keymap.set('n', '<space>m', '<cmd>Mason<cr>')
+    end,
   },
 
   -- Autocompletion
