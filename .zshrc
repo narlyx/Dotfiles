@@ -43,3 +43,6 @@ alias pbpaste="xsel --output --clipboard"
 # Grub shortcuts
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias update-grub2="sudo grub2-mkconfig -o /boot/grub2/grub.cf"
+
+# Windows muscle memory
+alias cls="clear"
