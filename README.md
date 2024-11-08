@@ -19,3 +19,4 @@
 * Hyprland
     * Playerctl
     * Wofi
+    * Hyprpaper
