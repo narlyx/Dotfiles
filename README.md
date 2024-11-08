@@ -17,6 +17,10 @@
     * Some plugins also require Yarn
 * Oh-my-posh
 * Hyprland
-    * Playerctl
     * Wofi
+    * Waybar
     * Hyprpaper
+    * Cmake
+    * Meson
+    * Cpio
+    * Playerctl
