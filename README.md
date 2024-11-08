@@ -16,6 +16,10 @@
     * NPM is required for the "Mason" plugin
 * Oh-my-posh
 * Hyprland
-    * Playerctl
     * Wofi
+    * Waybar
     * Hyprpaper
+    * Cmake
+    * Meson
+    * Cpio
+    * Playerctl
