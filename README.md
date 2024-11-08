@@ -20,7 +20,4 @@
     * Wofi
     * Waybar
     * Hyprpaper
-    * Cmake
-    * Meson
-    * Cpio
     * Playerctl
