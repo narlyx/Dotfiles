@@ -29,12 +29,12 @@ window#waybar {
 }
 
 #workspaces button {
-  color: #414559;
+  color: #737994;
   padding: 0px 4px 0px 4px;
 }
 
 #workspaces button.active {
-  color: #737994;
+  color: #ffffff;
 }
 
 #workspaces button:hover {
