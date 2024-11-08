@@ -1,0 +1,94 @@
+* {
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+window#waybar {
+  background: #232634;
+}
+
+#custom-spacer {
+  color: #303446;
+  margin: 8px;
+}
+
+#custom-launcher {
+  color: #1b1b1b;
+  background: #ffffff;
+  margin: 5px;
+  margin-right: 0px;
+  padding: 0px 20px 0px 20px;
+}
+
+#workspaces {
+  background: #303446;
+  margin: 5px;
+  margin-right: 0px;
+  padding: 0px;
+}
+
+#workspaces button {
+  color: #414559;
+  padding: 0px 4px 0px 4px;
+}
+
+#workspaces button.active {
+  color: #737994;
+}
+
+#workspaces button:hover {
+  color: #ca9ee6;
+}
+
+#workspaces button.urgent {
+  color: #e78284;
+}
+
+#mode {
+  color: #232634;
+  background: #e78284;
+  margin: 5px;
+  margin-right: 0px;
+  padding: 0px 6px 0px 6px;
+}
+
+#window {
+  color: #737994;
+}
+
+#clock {
+  color: #c6d0f5;
+  background: #303446;
+  margin: 5px;
+  padding: 0px 6px 0px 6px;
+}
+
+#wireplumber {
+  color: #c6d0f5;
+  margin: 5px;
+  margin-right: 0px;
+  padding: 0px 6px 0px 6px;
+}
+
+#network {
+  color: #c6d0f5;
+  margin: 5px;
+  margin-right: 0px;
+  padding: 0px 6px 0px 6px;
+}
+
+#battery {
+  color: #c6d0f5;
+  margin: 5px;
+  margin-right: 0px;
+  padding: 0px 6px 0px 6px;
+}
+
+#custom-powermenu {
+  color: #232634;
+  background: #c6d0f5;
+  margin: 5px;
+  margin-left: 0px;
+  padding: 0px 8px 0px 8px;
+}
