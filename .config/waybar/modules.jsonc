@@ -6,13 +6,13 @@
 
   "custom/launcher": {
     "format": "󱓞  Launcher",
-    "on-click": "wofi --show drun",
+    "on-click": "walker --modules applications",
     "tooltip": false
   },
   
   "custom/powermenu": {
     "format": "󰐥",
-    "on-click": "~/.config/hypr/powermenu.sh",
+    "on-click": "walker --modules powermenu",
     "tooltip": false
   },
 
@@ -21,7 +21,7 @@
     "interval": 7200,
     "exec": "checkupdates | wc -l",
     "exec-if": "exit 0",
-    "on-click": "kitty -e sudo pacman -Syu",
+    "on-click": "alacritty -e sudo pacman -Syu",
     "signal": 8
   },
 
