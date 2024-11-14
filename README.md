@@ -21,6 +21,10 @@
     * Hyprpaper
     * Playerctl
     * Mako
+    * Jq
+    * Grim
+    * Slurp
+    * Swappy
     * gtk3
     * gtk4
     * xdg-desktop-portal-gtk
