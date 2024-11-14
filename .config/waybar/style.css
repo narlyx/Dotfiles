@@ -5,11 +5,11 @@
 }
 
 window#waybar {
-  background: #232634;
+  background: #303446;
 }
 
 #custom-spacer {
-  color: #303446;
+  color: #414559;
   margin: 8px;
 }
 
@@ -34,20 +34,20 @@ window#waybar {
 }
 
 #workspaces button.active {
-  color: #ffffff;
+  color: #c6d0f5;
 }
 
 #workspaces button:hover {
-  color: #ca9ee6;
+  color: #8caaee;
 }
 
 #workspaces button.urgent {
-  color: #e78284;
+  color: #ef9f76;
 }
 
 #mode {
   color: #232634;
-  background: #e78284;
+  background: #ef9f76;
   margin: 5px;
   margin-right: 0px;
   padding: 0px 6px 0px 6px;
