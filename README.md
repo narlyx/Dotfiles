@@ -16,3 +16,18 @@
     * NPM is required for the "Mason" plugin
     * Some plugins also require Yarn
 * Oh-my-posh
+* Hyprland
+    * Walker
+    * Waybar
+    * Hyprpaper
+    * Playerctl
+    * Mako
+    * Jq
+    * Grim
+    * Slurp
+    * Swappy
+    * gtk3
+    * gtk4
+    * xdg-desktop-portal-gtk
+    * xdg-desktop-portal-hyprland
+
