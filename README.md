@@ -10,7 +10,13 @@
 * Tmux
 * JetBrainsMono Nerd Font
 
-# Other Configurations
+## Required for Linux
+* Rmtrash
+
+## Required for Darwin
+Null
+
+## Other Configurations
 * Alacritty
 * Neovim
     * NPM is required for the "Mason" plugin
