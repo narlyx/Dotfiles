@@ -19,6 +19,8 @@
     "tray",
     "custom/spacer",
     "battery",
+    "wireplumber",
+    "network",
     "clock",
     "custom/powermenu"
   ]
