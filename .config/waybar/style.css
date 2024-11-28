@@ -85,6 +85,14 @@ window#waybar {
   padding: 0px 6px 0px 6px;
 }
 
+#battery.warning {
+  color: #ff9c33;
+}
+
+#battery.critical {
+  color: #ff5733;
+}
+
 #custom-powermenu {
   color: #232634;
   background: #c6d0f5;
