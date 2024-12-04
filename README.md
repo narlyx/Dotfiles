@@ -24,6 +24,7 @@ Null
 * Oh-my-posh
 * Hyprland
     * Python
+    * EWW
     * Walker
     * Hyprpaper
     * Playerctl
