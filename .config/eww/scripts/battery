@@ -1,0 +1,47 @@
+#! /bin/bash
+
+BAT=`ls /sys/class/power_supply | grep BAT | head -n 1`
+CAP=`cat /sys/class/power_supply/${BAT}/capacity`
+STAT=`cat /sys/class/power_supply/${BAT}/status`
+
+battery() {
+  echo ${CAP}
+}
+
+batteryIcon() {
+  if [[ ${STAT} == "Discharging" ]]; then
+    if [[ ${CAP} -ge 90 ]]; then
+      echo "󰁹"
+    elif [[ ${CAP} -ge 75 ]]; then
+      echo "󰂁"
+    elif [[ ${CAP} -ge 50 ]]; then
+      echo "󰁾"
+    elif [[ ${CAP} -ge 25 ]]; then
+      echo "󰁼"
+    elif [[ ${CAP} -ge 10 ]]; then
+      echo "󰁺"
+    elif [[ ${CAP} -ge 0 ]]; then
+      echo "󰂃"
+    fi
+  else
+    if [[ ${CAP} -ge 90 ]]; then
+      echo "󰂅"
+    elif [[ ${CAP} -ge 75 ]]; then
+      echo "󰂊"
+    elif [[ ${CAP} -ge 50 ]]; then
+      echo "󰢝"
+    elif [[ ${CAP} -ge 25 ]]; then
+      echo "󰂇"
+    elif [[ ${CAP} -ge 10 ]]; then
+      echo "󰂆"
+    elif [[ ${CAP} -ge 0 ]]; then
+      echo "󰢜"
+    fi
+  fi
+}
+
+if [[ "$1" == "--capacity" ]]; then
+	battery
+elif [[ "$1" == "--icon" ]]; then
+	batteryIcon
+fi

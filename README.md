@@ -23,8 +23,8 @@ Null
     * Some plugins also require Yarn
 * Oh-my-posh
 * Hyprland
+    * Python
     * Walker
-    * Waybar
     * Hyprpaper
     * Playerctl
     * Mako

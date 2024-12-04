@@ -1,0 +1,51 @@
+button,scale {
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow: none;
+  background: transparent;
+  background-color: transparent;
+}
+
+slider {
+  background: #8caaee;
+  box-shadow: none;
+  border: none;
+}
+
+.bar {
+  background-color: #303446;
+  color: #c6d0f5;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 5px;
+}
+
+.module {
+  border-radius: 5px;
+}
+
+.launcherModule {
+  background: #8caaee;
+  color: #292c3c;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.windowNameModule {
+  color: #838ba7;
+}
+
+.spacer {
+  color: #414559;
+}
+
+.workspaceEntry {
+  color: #838ba7;
+
+  &.active {
+    color: #c6d0f5;
+  }
+}

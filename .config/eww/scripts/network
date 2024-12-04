@@ -1,0 +1,36 @@
+#! /bin/bash
+
+DEVICE=`nmcli -t -f DEVICE connection show --active | head -n 1`
+TYPE=`nmcli -t -f TYPE connection show --active | head -n 1`
+ESSID=`nmcli -t -f NAME connection show --active | head -n 1`
+
+icon() {
+  if [[ ${TYPE} == *"wireless"* ]]; then
+    STRENGTH=`nmcli dev wifi list | grep \* | awk '{print ($8)}'`
+    if [[ ${STRENGTH} -ge 85 ]]; then
+      echo "󰤨"
+    elif [[ ${STRENGTH} -ge 60 ]]; then
+      echo "󰤥"
+    elif [[ ${STRENGTH} -ge 40 ]]; then
+      echo "󰤢"
+    elif [[ ${STRENGTH} -ge 0 ]]; then
+      echo "󰤟"
+    fi
+  else
+    echo "󰤭"
+  fi
+}
+
+essid() {
+  if [[ ${TYPE} == *"wireless"* ]]; then
+    echo ${ESSID}
+  else
+    echo N/A
+  fi
+}
+
+if [[ "$1" == "--essid" ]]; then
+	essid
+elif [[ "$1" == "--icon" ]]; then
+	icon
+fi
