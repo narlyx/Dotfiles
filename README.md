@@ -22,6 +22,7 @@ Null
     * NPM is required for the "Mason" plugin
     * Some plugins also require Yarn
 * Oh-my-posh
+* Waybar
 * Hyprland
     * Python
     * EWW
