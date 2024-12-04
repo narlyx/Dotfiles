@@ -1,0 +1,196 @@
+(defpoll clockTime :interval "5s" "date +'%I:%M:%S %p'")
+(defpoll clockDate :interval "10s" "date +'%B %d, %Y'")
+(defpoll batteryPrecent :interval "10s" "scripts/battery --capacity")
+(defpoll batteryIcon :interval "10s" "scripts/battery --icon")
+(defpoll networkEssid :interval "10s" "scripts/network --essid")
+(defpoll networkIcon :interval "1s" "scripts/network --icon")
+(defpoll volumeIcon :interval "100ms" "scripts/volume --icon")
+(defpoll volumePrecent :interval "100ms" "scripts/volume --precent")
+
+(defpoll activeWindow :interval "100ms" "scripts/hyprland.py --get-active-window")
+(defpoll activeWorkspace :interval "100ms" "scripts/hyprland.py --get-active-workspace")
+(defpoll workspaces :interval "100ms" "scripts/hyprland.py --get-workspaces")
+
+(defvar timeRev false)
+(defvar networkRev false)
+(defvar batteryRev false)
+(defvar volumeRev false)
+
+(defwidget spacer []
+  (label
+    :class "module spacer"
+    :text ""
+  )
+)
+
+(defwidget launcherModule []
+  (button
+    :class "module launcherModule"
+    :onclick "walker"
+    "󱓞  Launcher"
+  )
+)
+
+(defwidget clockModule []
+  (eventbox
+    :onhover "eww update timeRev=true"
+    :onhoverlost "eww update timeRev=false"
+    (box
+      :class "module clockModule"
+      :space-evenly false
+      :spacing 9
+      (label :text "󰥔")
+      (label :text clockTime)
+      (revealer
+        :transition "slideRight"
+        :duration "350ms"
+        :reveal timeRev
+        (label :text clockDate)
+      )
+    )
+  )
+)
+
+(defwidget batteryModule []
+  (eventbox
+    :onhover "eww update batteryRev=true"
+    :onhoverlost "eww update batteryRev=false"
+    (box 
+      :class "module batteryModule"
+      :space-evenly false
+      :spacing 7
+      (label :text batteryIcon)
+      (revealer
+        :transition "slideRight"
+        :duration "350ms"
+        :reveal batteryRev
+        (label :text "${batteryPrecent}%")
+      )
+    )
+  )
+)
+
+(defwidget networkModule []
+  (eventbox
+    :onhover "eww update networkRev=true"
+    :onhoverlost "eww update networkRev=false"
+    (box :class "module networkModule"
+      :space-evenly false
+      :spacing 9
+      (label :text networkIcon)
+      (revealer
+        :transition "slideRight"
+        :duration "350ms"
+        :reveal networkRev
+        (label :text networkEssid)
+      )
+    )
+  )
+)
+
+(defwidget volumeModule []
+  (eventbox
+    :onhover "eww update volumeRev=true"
+    :onhoverlost "eww update volumeRev=false"
+    (box :class "module volumeModule"
+      :space-evenly false
+      :spacing 9
+      (label :text volumeIcon)
+      (revealer
+        :transition "slideright"
+        :duration "350ms"
+        :reveal volumeRev
+        (scale
+          :width 105
+          :max 101
+          :min 0
+          :value volumePrecent
+          :onchange "scripts/volume --set {}")
+      )
+    )
+  )
+)
+
+(defwidget windowNameModule []
+  (label
+    :class "module windowNameModule"
+    :text {activeWindow.title}
+  )
+)
+
+(defwidget workspaceModule []
+  (eventbox
+    (box
+      :class "module workspaceModule"
+      :space-evenly false
+      :spacing 5
+      (label :text "${workspaces}${activeWorkspace}" :visible false)
+      (for workspace in workspaces
+        (button
+          :class "workspaceEntry ${workspace.id == activeWorkspace.id ? "active" : ""}"
+          :onclick "scripts/hyprland.py --to-workspace ${workspace.id}"
+          {workspace.id}
+        )
+      )
+    )
+  )
+)
+
+(defwidget left []
+  (box
+    :orientation "h"
+    :space-evenly false
+    :halign "left"
+    :spacing 15
+    (launcherModule)
+    (workspaceModule)
+    (spacer)
+    (windowNameModule)
+  )
+)
+
+(defwidget center []
+  (box
+    :orientation "h"
+    :space-evenly false
+    :halign "center"
+    :spacing 15
+  )
+)
+
+(defwidget right []
+  (box
+    :orientation "h"
+    :space-evenly false
+    :halign "end"
+    :spacing 15
+    (batteryModule)
+    (volumeModule)
+    (networkModule)
+    (clockModule)
+  )
+)
+
+(defwidget mainBar []
+  (box
+    :class "bar"
+    :orientation "h"
+    (left)
+    (center)
+    (right)
+  )
+)
+
+(defwindow bar
+  :geometry (geometry
+    :x "0px"
+    :y "0px"
+    :width "100%"
+    :height "36px"
+    :anchor "top center"
+  )
+  :monitor 0
+  :stacking "fg"
+  :exclusive true
+  (mainBar)
+)

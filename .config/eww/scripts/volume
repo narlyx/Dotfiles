@@ -1,0 +1,41 @@
+#! /bin/bash
+
+PRECENT=`wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print($2)}'`
+PRECENT=$(awk -v percent="$PRECENT" 'BEGIN {print percent*100}')
+MUTED=`wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print(length($3) > 0)}'`
+
+precent() {
+  echo ${PRECENT}
+}
+
+muted() {
+  echo ${MUTED}
+}
+
+icon() {
+  if [[ ${MUTED} == 1 ]]; then
+    echo ""
+  elif [[ ${PRECENT} -ge 60 ]]; then
+    echo ""
+  elif [[ ${PRECENT} -ge 20 ]]; then
+    echo ""
+  elif [[ ${PRECENT} -gt 0 ]]; then
+    echo ""
+  else
+    echo ""
+  fi
+}
+
+setVolume() {
+  wpctl set-volume @DEFAULT_AUDIO_SINK@ ${1}%
+}
+
+if [[ "$1" == "--precent" ]]; then
+  precent
+elif [[ "$1" == "--muted" ]]; then
+  muted
+elif [[ "$1" == "--icon" ]]; then
+  icon
+elif [[ "$1" == "--set" ]]; then
+  setVolume $2
+fi
