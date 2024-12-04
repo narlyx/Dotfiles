@@ -1,4 +1,4 @@
-## Cli Dependancies
+## General Dependancies
 * Zsh
 * Zoxide
 * Eza
@@ -9,6 +9,7 @@
 * Xsel
 * Tmux
 * JetBrainsMono Nerd Font
+* Python
 
 ## Required for Linux
 * Rmtrash
@@ -24,10 +25,9 @@ Null
 * Oh-my-posh
 * Waybar
 * Hyprland
-    * Python
     * EWW
+    * SWWW
     * Walker
-    * Hyprpaper
     * Playerctl
     * Mako
     * Jq
