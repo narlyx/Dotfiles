@@ -1,15 +1,18 @@
 (defpoll clockTime :interval "5s" "date +'%I:%M:%S %p'")
 (defpoll clockDate :interval "10s" "date +'%B %d, %Y'")
-(defpoll batteryPrecent :interval "10s" "scripts/battery --capacity")
-(defpoll batteryIcon :interval "10s" "scripts/battery --icon")
-(defpoll networkEssid :interval "10s" "scripts/network --essid")
-(defpoll networkIcon :interval "1s" "scripts/network --icon")
-(defpoll volumeIcon :interval "100ms" "scripts/volume --icon")
-(defpoll volumePrecent :interval "100ms" "scripts/volume --precent")
+
+(defpoll networkSsid :interval "1s" "scripts/network.py --get-ssid")
+(defpoll networkIcon :interval "1s" "scripts/network.py --get-icon")
 
 (defpoll activeWindow :interval "100ms" "scripts/hyprland.py --get-active-window")
 (defpoll activeWorkspace :interval "100ms" "scripts/hyprland.py --get-active-workspace")
 (defpoll workspaces :interval "100ms" "scripts/hyprland.py --get-workspaces")
+
+(defpoll batteryPercent :interval "10s" "scripts/battery.py --get-percent")
+(defpoll batteryIcon :interval "10s" "scripts/battery.py --get-icon")
+
+(defpoll volumePercent :interval "100ms" "scripts/wireplumber.py --get-percent")
+(defpoll volumeIcon :interval "100ms" "scripts/wireplumber.py --get-icon")
 
 (defvar timeRev false)
 (defvar networkRev false)
@@ -64,7 +67,7 @@
         :transition "slideRight"
         :duration "350ms"
         :reveal batteryRev
-        (label :text "${batteryPrecent}%")
+        (label :text "${batteryPercent}%")
       )
     )
   )
@@ -82,7 +85,7 @@
         :transition "slideRight"
         :duration "350ms"
         :reveal networkRev
-        (label :text networkEssid)
+        (label :text networkSsid)
       )
     )
   )
@@ -104,8 +107,8 @@
           :width 105
           :max 101
           :min 0
-          :value volumePrecent
-          :onchange "scripts/volume --set {}")
+          :value volumePercent
+          :onchange "scripts/wireplumber.py --set-percent {}")
       )
     )
   )
