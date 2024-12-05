@@ -49,3 +49,9 @@ slider {
     color: #c6d0f5;
   }
 }
+
+.batteryModule {
+  &.critical {
+    color: #e78284;
+  }
+}

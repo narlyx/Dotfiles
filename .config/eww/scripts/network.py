@@ -23,7 +23,7 @@ def getSsid():
 
 def getStrength():
     if ("wireless" in getType()):
-        return int(sp.getoutput("nmcli dev wifi list | grep \\* | awk '{print($8)}'"))
+        return int(sp.getoutput("nmcli -f IN-USE,SIGNAL device wifi | grep \\* | awk '{print($2)}'"))
     return 0
 
 
@@ -33,7 +33,7 @@ def getIcon():
     elif ("wireless" in getType()):
         icons = ["󰤯","󰤟","󰤢","󰤥","󰤨"]
         increment = (len(icons)-1)/100
-        icon = icons[math.floor(getStrength()*increment)]
+        icon = icons[math.floor(float(getStrength())*increment)]
         return icon
     else:
         return "󰤭"
