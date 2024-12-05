@@ -1,7 +1,7 @@
 # General
 border-radius=5
 border-size=1
-default-timeout=5
+default-timeout=5000
 
 # Colors
 background-color=#303446
