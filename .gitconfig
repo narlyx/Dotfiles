@@ -7,3 +7,5 @@
 [user]
 	email = 109835029+narlyx@users.noreply.github.com
 	name = Narlyx
+[http]
+	postBuffer = 157286400
