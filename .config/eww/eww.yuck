@@ -59,7 +59,7 @@
     :onhover "eww update batteryRev=true"
     :onhoverlost "eww update batteryRev=false"
     (box 
-      :class "module batteryModule ${batteryPercent <= 10 ? "critical" : ""}"
+      :class "module batteryModule ${batteryPercent <= 20 ? "warning" : ""} ${batteryPercent <= 10 ? "critical" : ""}"
       :space-evenly false
       :spacing 7
       (label :text batteryIcon)
