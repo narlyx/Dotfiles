@@ -1,9 +1,7 @@
 [credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
+  helper = !$GH_PATH auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
+  helper = !$GH_PATH auth git-credential
 [user]
 	email = 109835029+narlyx@users.noreply.github.com
 	name = Narlyx
