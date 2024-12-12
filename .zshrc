@@ -23,6 +23,12 @@ alias cat="bat"
 if [[ "$(uname)" != "Darwin" ]]; then
   alias rm="rmtrash"
   alias rmdir="rmdirtrash"
+  export GH_PATH="/usr/bin/gh"
+fi
+
+# Will run on macos
+if [[ "$(uname)" == "Darwin" ]]; then
+  export GH_PATH="/opt/homebrew/bin/gh"
 fi
 
 # Git shortcuts
