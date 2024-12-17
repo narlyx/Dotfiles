@@ -1,5 +1,6 @@
 ## General Dependancies
 * Zsh
+* Git
 * Zoxide
 * Eza
 * Starship
@@ -14,16 +15,10 @@
 ## Required for Linux
 * Rmtrash
 
-## Required for Darwin
+## Required for Darwin (MacOS)
 Null
 
-## Other Configurations
-* Alacritty
-* Neovim
-    * NPM is required for the "Mason" plugin
-    * Some plugins also require Yarn
-* Oh-my-posh
-* Waybar
+## Desktop Enviornments
 * Hyprland
     * EWW
     * SWWW
@@ -38,4 +33,12 @@ Null
     * gtk4
     * xdg-desktop-portal-gtk
     * xdg-desktop-portal-hyprland
+
+## Other Configurations
+* Alacritty
+* Neovim
+    * NPM is required for the "Mason" plugin
+    * Some plugins also require Yarn
+* Oh-my-posh
+* Waybar
 
