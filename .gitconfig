@@ -7,3 +7,5 @@
 	name = Narlyx
 [http]
 	postBuffer = 157286400
+[core]
+	pager = bat
