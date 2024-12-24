@@ -53,14 +53,14 @@ alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg" # Grub
 alias update-grub2="sudo grub2-mkconfig -o /boot/grub2/grub.cf"
 
 # General unix only
-if [[ "$(uname)" != "darwin" ]]; then
+if [[ "$(uname)" != "Darwin" ]]; then
   alias rm="rmtrash" # trash
   alias rmdir="rmdirtrash"
   export GH_PATH="/usr/bin/gh" # gh path
 fi
 
 # MacOS only
-if [[ "$(uname)" == "darwin" ]]; then
+if [[ "$(uname)" == "Darwin" ]]; then
   export GH_PATH="/opt/homebrew/bin/gh" # gh path
 fi
 
