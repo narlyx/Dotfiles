@@ -36,6 +36,7 @@ Null
 
 ## Other Configurations
 * Alacritty
+* Ghostty
 * Neovim
     * NPM is required for the "Mason" plugin
     * Some plugins also require Yarn
