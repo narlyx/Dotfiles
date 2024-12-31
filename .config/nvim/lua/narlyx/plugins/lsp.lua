@@ -1,80 +1,56 @@
 return {
-  -- Lsp zero
-  {
-    'VonHeikemen/lsp-zero.nvim',
-    branch = 'v3.x',
-    lazy = true,
-    config = false,
-    init = function()
-      vim.g.lsp_zero_extend_cmp = 0
-      vim.g.lsp_zero_extend_lspconfig = 0
+  { -- Installer
+    "williamboman/mason.nvim",
+    config = function()
+      require("mason").setup()
     end,
   },
-
-  -- Mason
-  {
-    'williamboman/mason.nvim',
-    lazy = false,
-    config = true,
-    init = function()
-      vim.keymap.set('n', '<space>m', '<cmd>Mason<cr>')
+  { -- LSP translation layer
+    "williamboman/mason-lspconfig.nvim",
+    config = function()
+      require("mason-lspconfig").setup({
+        ensure_installed = { "lua_ls", "jdtls", "pylsp" },
+      })
     end,
   },
-
-  -- Autocompletion
-  {
-    'hrsh7th/nvim-cmp',
-    event = 'InsertEnter',
-    dependencies = {
-      {'L3MON4D3/LuaSnip'},
-    },
+  { -- LSP
+    "neovim/nvim-lspconfig",
     config = function()
-      local lsp_zero = require('lsp-zero')
-      lsp_zero.extend_cmp()
+      local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-      local cmp = require('cmp')
-      local cmp_action = lsp_zero.cmp_action()
+      local lspconfig = require("lspconfig")
+      local globalConfig = { capabilities = capabilities }
+      lspconfig.lua_ls.setup(globalConfig)
+      lspconfig.jdtls.setup(globalConfig)
+      lspconfig.pylsp.setup(globalConfig)
 
-      cmp.setup({
-        formatting = lsp_zero.cmp_format({details = true}),
-        mapping = cmp.mapping.preset.insert({
-          ['<C-Space>'] = cmp.mapping.complete(),
-          ['<C-u>'] = cmp.mapping.scroll_docs(-4),
-          ['<C-d>'] = cmp.mapping.scroll_docs(4),
-          ['<C-f>'] = cmp_action.luasnip_jump_forward(),
-          ['<C-b>'] = cmp_action.luasnip_jump_backward(),
-        })
-      })
-    end
+      vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+      vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
+      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+    end,
   },
-
-  -- Lsp
-  {
-    'neovim/nvim-lspconfig',
-    cmd = {'LspInfo', 'LspInstall', 'LspStart'},
-    event = {'BufReadPre', 'BufNewFile'},
-    dependencies = {
-      {'hrsh7th/cmp-nvim-lsp'},
-      {'williamboman/mason-lspconfig.nvim'},
-    },
+  { -- LS translation layer
+    "jay-babu/mason-null-ls.nvim",
     config = function()
-      local lsp_zero = require('lsp-zero')
-      lsp_zero.extend_lspconfig()
-
-      lsp_zero.on_attach(function(client, bufnr)
-        lsp_zero.default_keymaps({buffer = bufnr})
-      end)
-
-      require('mason-lspconfig').setup({
-        ensure_installed = {},
-        handlers = {
-          lsp_zero.default_setup,
-          lua_ls = function()
-            local lua_opts = lsp_zero.nvim_lua_ls()
-            require('lspconfig').lua_ls.setup(lua_opts)
-          end,
-        }
+      require("mason-null-ls").setup({
+        ensure_installed = { "stylua", "google_java_fornmat", "black", "isort" },
       })
-    end
-  }
+    end,
+  },
+  { -- Formatting & linting
+    "nvimtools/none-ls.nvim",
+    config = function()
+      local null_ls = require("null-ls")
+      null_ls.setup({
+        sources = {
+          null_ls.builtins.formatting.stylua,
+          null_ls.builtins.formatting.google_java_format,
+          null_ls.builtins.formatting.black,
+          null_ls.builtins.formatting.isort,
+        },
+      })
+
+      vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+    end,
+  },
 }
