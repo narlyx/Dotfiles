@@ -12,7 +12,5 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-vim.keymap.set('n', '<space>l', '<cmd>Lazy<cr>')
-
 -- Loading plugins
 require("lazy").setup({import = "narlyx.plugins"})
