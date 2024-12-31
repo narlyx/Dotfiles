@@ -1,4 +1,4 @@
-theme = rose-pine
+theme = catppuccin-frappe
 background = #000000
 background-opacity = 0.65
 background-blur-radius = 20
