@@ -11,6 +11,7 @@
 * Tmux
 * JetBrainsMono Nerd Font
 * Python
+* Notify-send
 
 ## Required for Linux
 * Rmtrash
