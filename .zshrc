@@ -28,7 +28,7 @@ fi
 
 # Tmux autolaunch
 if [[ -n $DISPLAY && -n $XDG_CURRENT_DESKTOP ]] || [[ "$(uname)" == "Darwin" ]]; then
-  if [[ -z "$TMUX" && "$TERM" == "alacritty" ]]; then
+  if [[ -z "$TMUX" && "$TERM" == "xterm-ghostty" ]]; then
     tmux attach-session -t $(tmux ls | awk '{print $1}' | tail -n 1) 2>/dev/null || tmux new-session
   fi
 fi
