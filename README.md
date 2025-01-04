@@ -12,6 +12,7 @@
 * JetBrainsMono Nerd Font
 * Python
 * Notify-send
+* Brightnessctl
 
 ## Required for Linux
 * Rmtrash
