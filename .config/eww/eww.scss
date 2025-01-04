@@ -1,63 +1,33 @@
-button,scale {
-  padding: 0;
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  text-shadow: none;
+.statusbar {
   background: transparent;
-  background-color: transparent;
-}
-
-slider {
-  background: #8caaee;
-  box-shadow: none;
-  border: none;
-}
-
-window {
-  background-color: #303446;
-  color: #c6d0f5;
-}
-
-.bar {
   font-weight: bold;
-  font-size: 11px;
-  margin: 5px;
-}
-
-.module {
-  border-radius: 5px;
-}
-
-.launcherModule {
-  background: #8caaee;
-  color: #292c3c;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.windowNameModule {
-  color: #838ba7;
-}
-
-.spacer {
-  color: #414559;
-}
-
-.workspaceEntry {
-  color: #838ba7;
-
-  &.active {
-    color: #c6d0f5;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  button {
+    color: white;
   }
 }
 
-.batteryModule {
-  &.warning {
-    color: #e5c890;
+.barModule {
+  &.windowName {
+    color: #838ba7;
   }
-  &.critical {
-    color: #e78284;
+  &.workspace {
+    button {
+      padding: 0;
+      margin: 0;
+      border: none;
+      box-shadow: none;
+      text-shadow: none;
+      background: transparent;
+    }
+    &.workspaceEntry {
+      color: #838ba7;
+
+      &.active {
+        color: #c6d0f5;
+      }
+    }
   }
 }
