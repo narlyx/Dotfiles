@@ -19,27 +19,27 @@
 (defvar batteryRev false)
 (defvar volumeRev false)
 
-(defwidget spacer []
+(defwidget barSpacer []
   (label
-    :class "module spacer"
+    :class "barModule spacer"
     :text ""
   )
 )
 
-(defwidget launcherModule []
+(defwidget barLauncherModule []
   (button
-    :class "module launcherModule"
+    :class "barModule launcher"
     :onclick "walker"
     "󱓞  Launcher"
   )
 )
 
-(defwidget clockModule []
+(defwidget barClockModule []
   (eventbox
     :onhover "eww update timeRev=true"
     :onhoverlost "eww update timeRev=false"
     (box
-      :class "module clockModule"
+      :class "barModule clock"
       :space-evenly false
       :spacing 9
       (label :text "󰥔")
@@ -54,12 +54,12 @@
   )
 )
 
-(defwidget batteryModule []
+(defwidget barBatteryModule []
   (eventbox
     :onhover "eww update batteryRev=true"
     :onhoverlost "eww update batteryRev=false"
     (box 
-      :class "module batteryModule ${batteryPercent <= 20 ? "warning" : ""} ${batteryPercent <= 10 ? "critical" : ""}"
+      :class "barModule battery ${batteryPercent <= 20 ? "warning" : ""} ${batteryPercent <= 10 ? "critical" : ""}"
       :space-evenly false
       :spacing 7
       (label :text batteryIcon)
@@ -73,11 +73,11 @@
   )
 )
 
-(defwidget networkModule []
+(defwidget barNetworkModule []
   (eventbox
     :onhover "eww update networkRev=true"
     :onhoverlost "eww update networkRev=false"
-    (box :class "module networkModule"
+    (box :class "barModule network"
       :space-evenly false
       :spacing 9
       (label :text networkIcon)
@@ -91,11 +91,11 @@
   )
 )
 
-(defwidget volumeModule []
+(defwidget barVolumeModule []
   (eventbox
     :onhover "eww update volumeRev=true"
     :onhoverlost "eww update volumeRev=false"
-    (box :class "module volumeModule"
+    (box :class "barModule volume"
       :space-evenly false
       :spacing 9
       (label :text volumeIcon)
@@ -114,23 +114,23 @@
   )
 )
 
-(defwidget windowNameModule []
+(defwidget barWindowNameModule []
   (label
-    :class "module windowNameModule"
+    :class "barModule windowName"
     :text {activeWindow.title}
   )
 )
 
-(defwidget workspaceModule []
+(defwidget barWorkspaceModule []
   (eventbox
     (box
-      :class "module workspaceModule"
+      :class "barModule workspace"
       :space-evenly false
       :spacing 5
       (label :text "${workspaces}${activeWorkspace}" :visible false)
       (for workspace in workspaces
         (button
-          :class "workspaceEntry ${workspace.id == activeWorkspace.id ? "active" : ""}"
+          :class "barModule workspace workspaceEntry ${workspace.id == activeWorkspace.id ? "active" : ""}"
           :onclick "scripts/hyprland.py --to-workspace ${workspace.id}"
           {workspace.id}
         )
@@ -139,20 +139,19 @@
   )
 )
 
-(defwidget left []
+
+(defwidget statusbarLeft []
   (box
     :orientation "h"
     :space-evenly false
-    :halign "left"
+    :halign "start"
     :spacing 15
-    (launcherModule)
-    (workspaceModule)
-    (spacer)
-    (windowNameModule)
+    (barWorkspaceModule)
+    (barWindowNameModule)
   )
 )
 
-(defwidget center []
+(defwidget statusbarCenter []
   (box
     :orientation "h"
     :space-evenly false
@@ -161,30 +160,30 @@
   )
 )
 
-(defwidget right []
+(defwidget statusbarRight []
   (box
     :orientation "h"
     :space-evenly false
     :halign "end"
     :spacing 15
-    (batteryModule)
-    (volumeModule)
-    (networkModule)
-    (clockModule)
+    (barBatteryModule)
+    (barVolumeModule)
+    (barNetworkModule)
+    (barClockModule)
   )
 )
 
-(defwidget mainBar []
+(defwidget statusbarLayout []
   (box
-    :class "bar"
+    :class "statusBar"
     :orientation "h"
-    (left)
-    (center)
-    (right)
+    (statusbarLeft)
+    (statusbarCenter)
+    (statusbarRight)
   )
 )
 
-(defwindow bar
+(defwindow statusbar
   :geometry (geometry
     :x "0px"
     :y "0px"
@@ -195,5 +194,5 @@
   :monitor 0
   :stacking "fg"
   :exclusive true
-  (mainBar)
+  (statusbarLayout)
 )
