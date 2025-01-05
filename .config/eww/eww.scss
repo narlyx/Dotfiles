@@ -10,9 +10,10 @@
 }
 
 .barModule {
-  &.windowName {
+  &.windowName, &.spacer {
     color: #838ba7;
   }
+
   &.workspace {
     button {
       padding: 0;
