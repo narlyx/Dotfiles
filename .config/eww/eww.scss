@@ -30,4 +30,13 @@
       }
     }
   }
+
+  &.battery {
+    &.warning {
+      color: #e5c890;
+    }
+    &.critical {
+      color: #e78284;
+    }
+  }
 }

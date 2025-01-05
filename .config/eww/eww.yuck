@@ -1,18 +1,18 @@
 (defpoll clockTime :interval "5s" "date +'%I:%M:%S %p'")
 (defpoll clockDate :interval "10s" "date +'%B %d, %Y'")
 
-(defpoll networkSsid :interval "1s" "scripts/network.py --get-ssid")
-(defpoll networkIcon :interval "1s" "scripts/network.py --get-icon")
+(defpoll networkSsid :interval "1s" "scripts/network getType")
+(defpoll networkIcon :interval "1s" "scripts/network getIcon")
 
-(defpoll activeWindow :interval "100ms" "scripts/hyprland.py --get-active-window")
-(defpoll activeWorkspace :interval "100ms" "scripts/hyprland.py --get-active-workspace")
-(defpoll workspaces :interval "100ms" "scripts/hyprland.py --get-workspaces")
+(defpoll activeWindow :interval "50ms" "scripts/windowmanager getActiveWindow")
+(defpoll activeWorkspace :interval "50ms" "scripts/windowmanager getActiveWorkspace")
+(defpoll workspaces :interval "50ms" "scripts/windowmanager getWorkspaces")
 
-(defpoll batteryPercent :interval "10s" "scripts/battery.py --get-percent")
-(defpoll batteryIcon :interval "10s" "scripts/battery.py --get-icon")
+(defpoll batteryPercent :interval "1s" "scripts/battery getPercent")
+(defpoll batteryIcon :interval "1s" "scripts/battery getIcon")
 
-(defpoll volumePercent :interval "100ms" "scripts/wireplumber.py --get-percent")
-(defpoll volumeIcon :interval "100ms" "scripts/wireplumber.py --get-icon")
+(defpoll volumePercent :interval "100ms" "scripts/media getVolume")
+(defpoll volumeIcon :interval "100ms" "scripts/media getIcon")
 
 (defvar timeRev false)
 (defvar networkRev false)
@@ -108,7 +108,7 @@
           :max 101
           :min 0
           :value volumePercent
-          :onchange "scripts/wireplumber.py --set-percent {}")
+          :onchange "scripts/media postVolume {}")
       )
     )
   )
@@ -131,7 +131,7 @@
       (for workspace in workspaces
         (button
           :class "barModule workspace workspaceEntry ${workspace.id == activeWorkspace.id ? "active" : ""}"
-          :onclick "scripts/hyprland.py --to-workspace ${workspace.id}"
+          :onclick "scripts/windowmanager postWorkspace ${workspace.id}"
           {workspace.id}
         )
       )
@@ -166,8 +166,8 @@
     :space-evenly false
     :halign "end"
     :spacing 15
-    (barBatteryModule)
     (barVolumeModule)
+    (barBatteryModule)
     (barNetworkModule)
     (barClockModule)
   )

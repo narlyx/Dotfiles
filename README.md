@@ -44,4 +44,10 @@ Null
     * Some plugins also require Yarn
 * Oh-my-posh
 * Waybar
+* Lf
+    * Ffmpegthumbnailer
+    * ImageMagick
+    * Poppler
+    * Epub-thumbnailer
+    * Wkhtmltopdf
 
