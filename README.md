@@ -10,7 +10,6 @@
 * Xsel
 * Tmux
 * JetBrainsMono Nerd Font
-* Go
 * Notify-send
 * Brightnessctl
 
