@@ -47,6 +47,7 @@ alias tree="eza --tree --icons --ignore-glob='.git'"
 alias du="du -h --max-depth=1"
 alias cat="bat"
 alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'" # Fancy fzf
+alias dnd="dragon-drop -x -a -T" # Drag and drop
 alias pbcopy="xsel --input --clipboard" # Clipboard
 alias pbpaste="xsel --output --clipboard"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg" # Grub

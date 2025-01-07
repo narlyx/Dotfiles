@@ -22,7 +22,7 @@
         },
         {
           "label": "Logout",
-          "icon": "system-logout",
+          "icon": "system-log-out",
           "exec": "hyprctl dispatch exit"
         }
       ]

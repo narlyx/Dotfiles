@@ -11,8 +11,8 @@
   (label :text distroLogo)
 )
 
-(defpoll clockTime :interval "5s" "date +'%I:%M:%S %p'")
-(defpoll clockDate :interval "10s" "date +'%B %d, %Y'")
+(defpoll clockTime :interval "1s" "date +'%I:%M:%S %p'")
+(defpoll clockDate :interval "1s" "date +'%B %d, %Y'")
 (defvar timeRev false)
 
 (defwidget barClockModule []
