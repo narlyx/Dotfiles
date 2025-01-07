@@ -9,9 +9,8 @@
 * Fzf
 * Xsel
 * Tmux
-* JetBrainsMono Nerd Font
+* JetBrains Mono (Nerd Font too)
 * Notify-send
-* Brightnessctl
 
 ## Required for Linux
 * Rmtrash
@@ -21,6 +20,7 @@ Null
 
 ## Desktop Enviornments
 * Hyprland
+    * Wezterm
     * EWW
     * SWWW
     * Walker
@@ -34,8 +34,10 @@ Null
     * gtk4
     * xdg-desktop-portal-gtk
     * xdg-desktop-portal-hyprland
+    * Brightnessctl
 
 ## Other Configurations
+* Wezterm
 * Alacritty
 * Ghostty
 * Neovim
@@ -43,3 +45,4 @@ Null
     * Some plugins also require Yarn
 * Oh-my-posh
 * Waybar
+* Dragon-drop
