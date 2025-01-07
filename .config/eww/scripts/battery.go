@@ -76,7 +76,14 @@ func getState() string {
 // Returns an icon that resembles the batterys stae and charge
 func getIcon() string {
   // Casting battery percent
-  percent, err := strconv.ParseFloat(getPercent(), 64)
+  stringPercent := getPercent()
+
+  // If nil
+  if stringPercent == "nil" {
+    return "󱉞"
+  }
+
+  percent, err := strconv.ParseFloat(stringPercent, 64)
 
   // Error handling
   if err != nil {
