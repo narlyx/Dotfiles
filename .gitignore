@@ -1,2 +1,3 @@
 .config/tmux/plugins
 !/.config/tmux/plugins/tpm/
+**/.DS_Store
