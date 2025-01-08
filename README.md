@@ -43,6 +43,4 @@ Null
 * Neovim
     * NPM is required for the "Mason" plugin
     * Some plugins also require Yarn
-* Oh-my-posh
-* Waybar
 * Dragon-drop
