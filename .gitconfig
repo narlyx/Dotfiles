@@ -1,11 +1,16 @@
-[credential "https://github.com"]
-  helper = !$GH_PATH auth git-credential
-[credential "https://gist.github.com"]
-  helper = !$GH_PATH auth git-credential
-[user]
-	email = 109835029+narlyx@users.noreply.github.com
-	name = Narlyx
-[http]
-	postBuffer = 157286400
 [core]
-	pager = bat
+  pager = "delta"
+
+[credential]
+  helper = "gh auth git-credential"
+
+[delta]
+  line-numbers = true
+  side-by-side = true
+
+[interactive]
+  diffFilter = "delta --color-only"
+
+[user]
+  email = "109835029+narlyx@users.noreply.github.com"
+  name = "Narlyx"

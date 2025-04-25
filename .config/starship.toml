@@ -1,0 +1,42 @@
+add_newline = true
+format = "[╭─](bold white)$os$hostname$directory$git_status\n[╰─](bold white)$shell$character"
+
+[character]
+error_symbol = "[~#@](bold red)"
+success_symbol = "[~#@](bold white)"
+
+[directory]
+format = "[$path]($style) [$read_only]($read_only_style)"
+read_only = " "
+read_only_style = "bold red"
+style = "bold blue"
+
+[git_status]
+format = "([ \\[$all_status$ahead_behind\\]]($style) )"
+style = "bold cyan"
+
+[hostname]
+disabled = false
+format = "[@$hostname](bold italic green) "
+ssh_only = false
+
+[os]
+disabled = false
+format = "[$symbol](bold white) "
+
+[os.symbols]
+Macos = ""
+NixOS = ""
+Unknown = ""
+
+[shell]
+disabled = false
+nu_indicator = "nu"
+style = "italic white"
+unknown_indicator = "???"
+zsh_indicator = "zsh"
+
+[username]
+disabled = false
+format = "[$user](bold italic green) "
+show_always = true

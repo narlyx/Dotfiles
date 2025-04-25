@@ -1,0 +1,6 @@
+zmodule zsh-users/zsh-syntax-highlighting
+zmodule zsh-users/zsh-autosuggestions
+zmodule zsh-users/zsh-completions
+zmodule MichaelAquilina/zsh-auto-notify
+zmodule MichaelAquilina/zsh-you-should-use
+zmodule ohmyzsh/ohmyzsh --root plugins/git
